@@ -30,16 +30,16 @@
         {
             this.DibujarButton = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtCordenadaX = new System.Windows.Forms.TextBox();
+            this.txtRectangulosCreados = new System.Windows.Forms.TextBox();
+            this.txtCordenadaY = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxColor = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxColor)).BeginInit();
             this.SuspendLayout();
             // 
             // DibujarButton
@@ -50,27 +50,28 @@
             this.DibujarButton.TabIndex = 0;
             this.DibujarButton.Text = "Dibujar";
             this.DibujarButton.UseVisualStyleBackColor = true;
+            this.DibujarButton.Click += new System.EventHandler(this.DibujarButton_Click);
             // 
-            // textBox2
+            // txtCordenadaX
             // 
-            this.textBox2.Location = new System.Drawing.Point(163, 68);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(156, 26);
-            this.textBox2.TabIndex = 2;
+            this.txtCordenadaX.Location = new System.Drawing.Point(163, 68);
+            this.txtCordenadaX.Name = "txtCordenadaX";
+            this.txtCordenadaX.Size = new System.Drawing.Size(156, 26);
+            this.txtCordenadaX.TabIndex = 2;
             // 
-            // textBox3
+            // txtRectangulosCreados
             // 
-            this.textBox3.Location = new System.Drawing.Point(441, 126);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(176, 26);
-            this.textBox3.TabIndex = 3;
+            this.txtRectangulosCreados.Location = new System.Drawing.Point(441, 126);
+            this.txtRectangulosCreados.Name = "txtRectangulosCreados";
+            this.txtRectangulosCreados.Size = new System.Drawing.Size(176, 26);
+            this.txtRectangulosCreados.TabIndex = 3;
             // 
-            // textBox1
+            // txtCordenadaY
             // 
-            this.textBox1.Location = new System.Drawing.Point(335, 68);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(156, 26);
-            this.textBox1.TabIndex = 4;
+            this.txtCordenadaY.Location = new System.Drawing.Point(335, 68);
+            this.txtCordenadaY.Name = "txtCordenadaY";
+            this.txtCordenadaY.Size = new System.Drawing.Size(156, 26);
+            this.txtCordenadaY.TabIndex = 4;
             // 
             // label1
             // 
@@ -99,13 +100,13 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Creador de rectangulos";
             // 
-            // pictureBox1
+            // pictureBoxColor
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(517, 68);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 26);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxColor.Location = new System.Drawing.Point(517, 68);
+            this.pictureBoxColor.Name = "pictureBoxColor";
+            this.pictureBoxColor.Size = new System.Drawing.Size(100, 26);
+            this.pictureBoxColor.TabIndex = 9;
+            this.pictureBoxColor.TabStop = false;
             // 
             // label5
             // 
@@ -132,17 +133,17 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxColor);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtCordenadaY);
+            this.Controls.Add(this.txtRectangulosCreados);
+            this.Controls.Add(this.txtCordenadaX);
             this.Controls.Add(this.DibujarButton);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxColor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,13 +153,13 @@
 
         private System.Windows.Forms.Button DibujarButton;
         private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtCordenadaX;
+        private System.Windows.Forms.TextBox txtRectangulosCreados;
+        private System.Windows.Forms.TextBox txtCordenadaY;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxColor;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
     }
