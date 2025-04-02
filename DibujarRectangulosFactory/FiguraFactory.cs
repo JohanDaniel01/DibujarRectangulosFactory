@@ -9,9 +9,9 @@ namespace DibujarRectangulosFactory
 {
     public class FiguraFactory
     {
-        public Figura CrearFigura(int x, int y, Color color)
+        public Figura CrearFigura(int x, int y, Color color, int contador)
         {
-            return new Rectangulo(x, y, color);
+            return new Rectangulo(x, y, color, contador);
         }
     }
 }

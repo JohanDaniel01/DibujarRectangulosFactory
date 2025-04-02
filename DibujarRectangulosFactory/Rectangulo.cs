@@ -9,11 +9,17 @@ namespace DibujarRectangulosFactory
 {
     public class Rectangulo : Figura
     {
-        private static int contador = 0; 
-        public static int Contador => contador;
-        public Rectangulo(int x, int y, Color color) : base(x, y, color)
+        public int Contador { get; set; }
+        
+        public Rectangulo(int x, int y, Color color, int contador) : base(x, y, color)
         {
-            contador++; // Incrementa el contador al crear una instancia
+            Contador = contador;
+        }
+
+        public int IncrementarContador()
+        {
+            Contador++;
+            return Contador;
         }
 
         public override void Dibujar(Graphics g)

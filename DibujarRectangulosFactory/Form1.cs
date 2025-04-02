@@ -23,32 +23,34 @@ namespace DibujarRectangulosFactory
         {
             try
             {
+                // Cordenadas numericas
+                int x;
+                int y;
                 string cordenadaX = txtCordenadaX.Text;
                 string cordenadaY = txtCordenadaY.Text;
 
-                if (!isValid(cordenadaX) && !isValid(cordenadaY))
+                if (!isValid(cordenadaX) || !isValid(cordenadaY))
                 {
                     MessageBox.Show($"Por favor rellene todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-
-                int x = int.Parse(txtCordenadaX.Text);
-                int y = int.Parse(txtCordenadaY.Text);
-
-                if (x < 0 || y < 0 || x > this.ClientSize.Width || y > this.ClientSize.Height)
-                {
-                    MessageBox.Show("Las coordenadas están fuera del rango permitido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                Figura rectangulo = FiguraFactory.CrearFigura("Rectangulo", x, y, colorSeleccionado);
+                if (!int.TryParse(cordenadaX, out x) || !int.TryParse(cordenadaY, out y))
+                {
+                    MessageBox.Show($"Por favor rellene todos los campos con valores numericos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                int contador = 0;
+                FiguraFactory figuraFactory = new FiguraFactory();
+                Rectangulo rectangulo = (Rectangulo)figuraFactory.CrearFigura(x, y, colorSeleccionado, contador);
 
                 using (Graphics g = this.CreateGraphics())
                 {
                     rectangulo.Dibujar(g);
                 }
 
-                txtContador.Text = Rectangulo.Contador.ToString(); // Actualizar contador
+                txtRectangulosCreados.Text = rectangulo.IncrementarContador().ToString(); // Actualizar contador
             }
             catch (Exception ex)
             {
